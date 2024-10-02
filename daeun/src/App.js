@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import RepoCard from './components/RepoCard'; 
 
 // //components없이 작성한 코드
 // function App() {
@@ -25,6 +25,27 @@ import './App.css';
 //   );
 // }
 
-//
+// //components 사용한 코드
+// function App() {
+//     return (
+//         <div>
+//           <ReactStudyRepoCard />
+//           <ReactStudyRepoCard />
+//           <ReactStudyRepoCard />
+//           {/* ... */}
+//       </div>
+//     );
+//   }
 
+//props 사용하여 더 효율적으로 만들어보자
+function App() {
+  return (
+	  <div>
+	    <RepoCard title="React-Study" description="React Study 실습 / 과제 레포" language="JavaScript" />
+	    <RepoCard title="Proj1" description="Proj1 설명입니다." language="TypeScript" />
+	    <RepoCard title="Proj2" description="Proj2 설명입니다." language="Java" />
+	    {/* ... */}
+    </div>
+  );
+}
 export default App;
